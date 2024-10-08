@@ -7,6 +7,14 @@ class Book
     string ISBN;
     int pgno;
 
+    public Book(string bookTitle, string bookAuthor, string bookISBN, int bookpgno)
+    {
+        Title = bookTitle; 
+        Author = bookAuthor;
+        ISBN = bookISBN;
+        pgno = bookpgno;
+    }
+
     void DisplayInfo()
     {
         Console.WriteLine("Book Information");
@@ -22,19 +30,8 @@ class Book
     static void Main(String[] args)
     {
         //created the an object book
-        Book book = new Book();
-        book.Title = "C# for Beginners";
-        book.Author = "Kevin Shalom";
-        book.ISBN = "12345";
-        book.pgno = 12;
-
-        //created another object book1
-        Book book1 = new Book();
-        book1.Title = "C# for Intermediate";
-        book1.Author = "Shalem Raj";
-        book1.ISBN = "54321";
-        book1.pgno = 21;
-
+        Book book = new Book("C# for Beginners","Kevin Shalom","1234",200);
+        Book book1 = new Book("Visual Studio 2022", "Microsoft", "123", 70);
         book.DisplayInfo();
         book1.DisplayInfo();
     }
